@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from discreteMarkovChain import markovChain
 
 
+# linear congruential generator
 def rng(start_n, stop_n, m=2 ** 32, a=1103515245, c=12345):
     for i in range(1, stop_n):
         if i > start_n:
@@ -46,14 +47,14 @@ state_4 = simulate(4, 3 * n, 4 * n)
 
 # plot
 n = 100
-plt.step(range(n), state_1)
+plt.step(range(n), state_4)
 plt.xticks(np.arange(0, n, step=10))
 plt.ylim(0, 5)
 plt.show()
 
 # steady state distribution
 mc = markovChain(g)
-mc.powerMethod(tol=1e-10, maxiter=1e16)
+mc.powerMetho.d(tol=1e-10, maxiter=1e16)
 steady_state = np.round(mc.pi, decimals=4)
 print(steady_state)
 

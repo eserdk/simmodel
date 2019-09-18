@@ -6,9 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+jupyter = "*"
 numpy = "*"
 matplotlib = "*"
+scipy = "*"
 discretemarkovchain = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
